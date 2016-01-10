@@ -1,5 +1,6 @@
 package freedealer.laosomboon.prawit.mytraffic2;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -50,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
                 //Sound Effect
                 MediaPlayer buttonMediaPlayer = MediaPlayer.create(getBaseContext(),R.raw.cow);
                 buttonMediaPlayer.start();
+
+                //Intent to ActionView
+                Intent objIntent = new Intent(Intent.ACTION_VIEW);
+                objIntent.setData(Uri.parse("https://youtu.be/hOUI_fZhftY"));
+                startActivity(objIntent);
 
 
             } // event
